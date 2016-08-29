@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AB8050A51D73CD1900B861F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8050A41D73CD1900B861F6 /* AppDelegate.swift */; };
-		AB8050A71D73CD1900B861F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8050A61D73CD1900B861F6 /* ViewController.swift */; };
 		AB8050AA1D73CD1900B861F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8050A81D73CD1900B861F6 /* Main.storyboard */; };
 		AB8050AC1D73CD1900B861F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8050AB1D73CD1900B861F6 /* Assets.xcassets */; };
 		AB8050AF1D73CD1900B861F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8050AD1D73CD1900B861F6 /* LaunchScreen.storyboard */; };
 		AB8050BA1D73CD1900B861F6 /* ScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8050B91D73CD1900B861F6 /* ScanTests.swift */; };
 		AB8050C51D73CD1900B861F6 /* ScanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8050C41D73CD1900B861F6 /* ScanUITests.swift */; };
+		AB8050D71D73D82800B861F6 /* BarCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8050D61D73D82800B861F6 /* BarCode.swift */; };
+		AB8050DB1D73D84D00B861F6 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8050DA1D73D84D00B861F6 /* ScanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		AB8050A11D73CD1900B861F6 /* Scan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8050A41D73CD1900B861F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB8050A61D73CD1900B861F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB8050A91D73CD1900B861F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB8050AB1D73CD1900B861F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB8050AE1D73CD1900B861F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		AB8050C01D73CD1900B861F6 /* ScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8050C41D73CD1900B861F6 /* ScanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanUITests.swift; sourceTree = "<group>"; };
 		AB8050C61D73CD1900B861F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB8050D61D73D82800B861F6 /* BarCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarCode.swift; path = Model/BarCode.swift; sourceTree = "<group>"; };
+		AB8050DA1D73D84D00B861F6 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = ViewController/ScanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,9 @@
 		AB8050A31D73CD1900B861F6 /* Scan */ = {
 			isa = PBXGroup;
 			children = (
+				AB8050D51D73D7E700B861F6 /* ViewController */,
+				AB8050D41D73D7D600B861F6 /* Model */,
 				AB8050A41D73CD1900B861F6 /* AppDelegate.swift */,
-				AB8050A61D73CD1900B861F6 /* ViewController.swift */,
 				AB8050A81D73CD1900B861F6 /* Main.storyboard */,
 				AB8050AB1D73CD1900B861F6 /* Assets.xcassets */,
 				AB8050AD1D73CD1900B861F6 /* LaunchScreen.storyboard */,
@@ -123,6 +126,22 @@
 				AB8050C61D73CD1900B861F6 /* Info.plist */,
 			);
 			path = ScanUITests;
+			sourceTree = "<group>";
+		};
+		AB8050D41D73D7D600B861F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB8050D61D73D82800B861F6 /* BarCode.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AB8050D51D73D7E700B861F6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB8050DA1D73D84D00B861F6 /* ScanViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +212,7 @@
 				TargetAttributes = {
 					AB8050A01D73CD1900B861F6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = CDTQ923KNC;
 					};
 					AB8050B41D73CD1900B861F6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,8 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB8050A71D73CD1900B861F6 /* ViewController.swift in Sources */,
 				AB8050A51D73CD1900B861F6 /* AppDelegate.swift in Sources */,
+				AB8050D71D73D82800B861F6 /* BarCode.swift in Sources */,
+				AB8050DB1D73D84D00B861F6 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +420,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Scan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pyl.Scan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +435,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Scan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pyl.Scan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
